@@ -1,0 +1,44 @@
+{
+  "name": "S Music Bot",
+  "description": "A DISCORD Music Bot with proper functions written in Python with NODE JS.",
+  "keywords": [
+  "python3",
+  "telegram",
+  "bot",
+  "Yukki",
+  "YukkiMusicBot",
+  "telegram-bot",
+  "pyrogram"
+  ],
+  "stack": "container",
+  "env": {
+    "TOKEN": {
+      "description": "Get this value from DISCORD",
+      "value": "",
+      "required": true
+    },
+        "PREFIX": {
+      "description": "YOUR WISH",
+      "value": "",
+      "required": true
+    }
+  },
+  "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
